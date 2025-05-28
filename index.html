@@ -6,18 +6,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Salut à tous</h2>
-    <form action="">
+    <h2>Formulaire d'information</h2>
+    <form action="#" method="post">
         <fieldset>
-            <legend>Entrer les information</legend>
-            <label for="">NOM :</label>
-            <input type="text">
-            <label for="">PRENOM :</label>
-            <input type="text">
-            <label for="">SEXE :</label>
-            <input type="radio" name="sexe">HOMME
-            <input type="radio" name="sexe">FEMME
-            <input type="radio" name="sexe">AUTRE
+            <legend>Vos informations personnelles</legend>
+            
+            <div class="form-group">
+                <label for="nom">NOM :</label>
+                <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
+            </div>
+            
+            <div class="form-group">
+                <label for="prenom">PRÉNOM :</label>
+                <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
+            </div>
+            
+            <div class="form-group">
+                <label>SEXE :</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="homme" name="sexe" value="homme">
+                        <label for="homme">Homme</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="femme" name="sexe" value="femme">
+                        <label for="femme">Femme</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="autre" name="sexe" value="autre">
+                        <label for="autre">Autre</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit">Envoyer</button>
         </fieldset>
     </form>
 </body>
